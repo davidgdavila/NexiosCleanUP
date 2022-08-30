@@ -1,0 +1,50 @@
+LayoutPrincipal:
+<LayoutPrincipal>:
+    MDToolbar:
+        #md_bg_color: .6,0,0,1
+        title: "Nexio's Clean-Up"
+        pos_hint: {"top": 1}
+        right_action_items : [["folder", lambda x : root.seleccionar_archivo()],["account-question", lambda x : root.show_acerca_de()]]
+
+
+
+    MDLabel:
+        id:eti1
+        text: root.etiqueta
+        font_style: "Subtitle1"
+        halign: "center"
+        color:"gray"
+    MDSpinner:
+        id: espiner
+        size_hint: None, None
+        size: dp(50), dp(50)
+        pos_hint: {'center_x': .5, 'center_y': .4}
+        active: root.activar
+
+
+
+
+
+<Acerca_de>:
+    orientation:"vertical"
+    MDBoxLayout:
+        orientation:"vertical"
+        Label:
+            text:root.texto_etiqueta
+            color:(1,1,1,1)
+    MDBoxLayout:
+        orientation:"vertical"
+        size_hint:(1,.2)
+        Label:
+            text: "Copyrigth 2022-Todos los derechos reservados"
+            color:(1,1,1,1)
+            font_size:11
+        Label:
+            text: "Clic fuera del recuadro para cerrar"
+            color:(1,1,1,1)
+            font_size:9
+
+
+
+
+
